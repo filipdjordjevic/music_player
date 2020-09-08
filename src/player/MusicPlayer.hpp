@@ -19,6 +19,7 @@ namespace player
         void pause() const;
         void seek(const long &ms) const;
         void setVolume(const long &value) const;
+        long position() const;
         Song *currentSong() const;
     };
 

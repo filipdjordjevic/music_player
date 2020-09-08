@@ -42,6 +42,13 @@ namespace player
         mciSendStringShort(command.str().c_str());
     }
 
+    long MusicPlayer::position() const
+    {
+        char res[128];
+        mciSendStringA("status curr_song position", res, 128, NULL);
+        return atoi(res);
+    }
+
     Song *MusicPlayer::currentSong() const
     {
         return this->song_;
