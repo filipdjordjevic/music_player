@@ -56,6 +56,13 @@ namespace player
         return atoi(res);
     }
 
+    long MusicPlayer::songLength() const
+    {
+        char res[128];
+        mciSendStringA("status curr_song length", res, 128, NULL);
+        return atoi(res);
+    }
+
     Song *MusicPlayer::currentSong() const
     {
         return this->song_;
