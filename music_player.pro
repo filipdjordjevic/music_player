@@ -13,3 +13,6 @@ SOURCES += \
 HEADERS += \
     src/widgets/MainWindow.hpp
 
+RESOURCES += \
+    resources/res.qrc \
+    
