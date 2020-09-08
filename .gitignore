@@ -54,3 +54,6 @@ compile_commands.json
 # Make builds
 debug/
 release/
+
+# vscode
+.vscode/
