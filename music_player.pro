@@ -13,6 +13,7 @@ SOURCES += \
     src/widgets/VolumeSlider.cpp \
     src/widgets/SeekBar.cpp \
     src/widgets/LcdLabel.cpp \
+    src/widgets/PlayerFrame.cpp \
 
 HEADERS += \
     src/widgets/MainWindow.hpp \
@@ -20,6 +21,7 @@ HEADERS += \
     src/widgets/VolumeSlider.hpp \
     src/widgets/SeekBar.hpp \
     src/widgets/LcdLabel.hpp \
+    src/widgets/PlayerFrame.hpp \
 
 RESOURCES += \
     resources/res.qrc \
