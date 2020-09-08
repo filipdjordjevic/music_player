@@ -6,4 +6,10 @@ INCLUDEPATH += src/
 
 
 # Input
-SOURCES += src/main.cpp
+SOURCES += \
+    src/main.cpp \
+    src/widgets/MainWindow.cpp
+
+HEADERS += \
+    src/widgets/MainWindow.hpp
+

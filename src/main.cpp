@@ -1,4 +1,15 @@
+#include <QtWidgets>
+
+#include "widgets/MainWindow.hpp"
+
+using namespace ui;
+
 int main(int argc, char **argv)
 {
-    return 0;
+    QApplication app(argc, argv);
+
+    MainWindow mainWindow;
+    mainWindow.show();
+
+    return app.exec();
 }
