@@ -5,5 +5,6 @@
     <file>icon/pause.svg</file>
     <file>icon/speaker.svg</file>
     <file>icon/speaker_mute.svg</file>
+    <file>font/DS-DIGIB.TTF</file>
   </qresource>
 </RCC>
