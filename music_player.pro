@@ -4,10 +4,14 @@ TEMPLATE = app
 TARGET = music_player
 INCLUDEPATH += src/
 
+include(lib/winmm.pri)
 
 # Input
 SOURCES += \
     src/main.cpp \
+    src/player/Song.cpp \
+    src/player/MusicPlayer.cpp \
+    src/util/TimeConverter.cpp \
     src/widgets/MainWindow.cpp \
     src/widgets/CircleButton.cpp \
     src/widgets/VolumeSlider.cpp \
@@ -16,6 +20,9 @@ SOURCES += \
     src/widgets/PlayerFrame.cpp \
 
 HEADERS += \
+    src/player/Song.hpp \
+    src/player/MusicPlayer.hpp \
+    src/util/TimeConverter.hpp \
     src/widgets/MainWindow.hpp \
     src/widgets/CircleButton.hpp \
     src/widgets/VolumeSlider.hpp \
@@ -25,4 +32,3 @@ HEADERS += \
 
 RESOURCES += \
     resources/res.qrc \
-    
