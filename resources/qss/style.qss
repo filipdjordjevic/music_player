@@ -30,3 +30,26 @@ ui--CircleButton#speaker {
 ui--CircleButton#mute {
 	qproperty-icon: url(":/icon/speaker_mute.svg");
 }
+
+ui--VolumeSlider::groove::horizontal {
+	background-color: black;
+	border: 0px solid #424242; 
+	height: 10px; 
+	border-radius: 4px;
+}
+
+ui--VolumeSlider::handle::horizontal {
+	background-color: #2b518f; 
+	border: 2px solid #1b417f; 
+	width: 16px; 
+	height: 20px; 
+	line-height: 20px; 
+	margin-top: -5px; 
+	margin-bottom: -5px; 
+	border-radius: 10px; 
+}
+
+ui--VolumeSlider::sub-page:horizontal {
+	background-color: #2b518f;
+	height: 5px;
+}
