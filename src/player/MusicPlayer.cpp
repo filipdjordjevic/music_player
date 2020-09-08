@@ -35,6 +35,13 @@ namespace player
         mciSendStringShort(command.str().c_str());
     }
 
+    void MusicPlayer::setVolume(const long &value) const
+    {
+        std::stringstream command;
+        command << "setaudio curr_song volume to " << value;
+        mciSendStringShort(command.str().c_str());
+    }
+
     Song *MusicPlayer::currentSong() const
     {
         return this->song_;
