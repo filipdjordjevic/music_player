@@ -1,3 +1,32 @@
 ui--MainWindow {
 	background-color: #2e2c30;
 }
+
+ui--CircleButton {
+	background-color: transparent;
+	border-radius: 20px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: black;
+	width: 25px;
+	height: 25px;
+	margin: 5px;
+	padding: 5px;
+	qproperty-iconSize: 30px;
+}
+
+ui--CircleButton#play {
+	qproperty-icon: url(":/icon/play.svg");
+}
+
+ui--CircleButton#pause {
+	qproperty-icon: url(":/icon/pause.svg");
+}
+
+ui--CircleButton#speaker {
+	qproperty-icon: url(":/icon/speaker.svg");
+}
+
+ui--CircleButton#mute {
+	qproperty-icon: url(":/icon/speaker_mute.svg");
+}

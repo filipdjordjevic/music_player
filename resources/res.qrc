@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="/">
     <file>qss/style.qss</file>
+    <file>icon/play.svg</file>
+    <file>icon/pause.svg</file>
+    <file>icon/speaker.svg</file>
+    <file>icon/speaker_mute.svg</file>
   </qresource>
 </RCC>
