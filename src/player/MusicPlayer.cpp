@@ -10,6 +10,13 @@ namespace player
 
     MusicPlayer::MusicPlayer() {}
 
+    MusicPlayer &MusicPlayer::instance()
+    {
+        static MusicPlayer instance;
+
+        return instance;
+    }
+
     void MusicPlayer::open(Song *song)
     {
         this->song_ = song;

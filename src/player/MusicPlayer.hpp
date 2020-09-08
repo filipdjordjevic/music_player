@@ -10,9 +10,12 @@ namespace player
     class MusicPlayer
     {
         Song *song_;
+        MusicPlayer();
 
     public:
-        MusicPlayer();
+        static MusicPlayer &instance();
+        MusicPlayer(const MusicPlayer &) = delete;
+        void operator=(const MusicPlayer &) = delete;
         ~MusicPlayer();
         void open(Song *song);
         void play() const;
