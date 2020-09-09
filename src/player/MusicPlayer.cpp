@@ -19,6 +19,7 @@ namespace player
 
     void MusicPlayer::open(Song *song)
     {
+        mciSendStringShort("close curr_song");
         this->song_ = song;
         std::stringstream command;
         command << "open \"" << song_->path() << "\" type mpegvideo alias curr_song";
