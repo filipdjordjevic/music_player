@@ -20,8 +20,13 @@ namespace ui
         SeekBar *seekBar_;
         LcdLabel *durationLbl_;
         LcdLabel *songLbl_;
+        bool playing_;
+        QTimer *timer_;
+
+        void connectWidgetsToActions();
 
     public:
         PlayerFrame(QWidget *parent = NULL);
+        void loadSongData();
     };
 } // namespace ui

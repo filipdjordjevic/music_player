@@ -10,9 +10,12 @@ namespace player
     class MusicPlayer
     {
         Song *song_;
+        MusicPlayer();
 
     public:
-        MusicPlayer();
+        static MusicPlayer &instance();
+        MusicPlayer(const MusicPlayer &) = delete;
+        void operator=(const MusicPlayer &) = delete;
         ~MusicPlayer();
         void open(Song *song);
         void play() const;
@@ -20,6 +23,7 @@ namespace player
         void seek(const long &ms) const;
         void setVolume(const long &value) const;
         long position() const;
+        long songLength() const;
         Song *currentSong() const;
     };
 

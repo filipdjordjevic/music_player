@@ -1,5 +1,9 @@
 #include "MainWindow.hpp"
 
+#include "player/MusicPlayer.hpp";
+
+using namespace player;
+
 namespace ui
 {
     MainWindow::MainWindow(QWidget *parent)
@@ -51,7 +55,13 @@ namespace ui
 
         QPushButton *openBtn = new QPushButton("Open");
         openBtn->setObjectName("titlebar-open");
-        QObject::connect(openBtn, &QPushButton::clicked, this, [this] { QFileDialog::getOpenFileUrl(this, "Open mp3 file", QDir::homePath()); });
+        QObject::connect(openBtn, &QPushButton::clicked, this,
+                         [this] {
+                             QUrl url = QFileDialog::getOpenFileUrl(this, "Open mp3 file", QDir::homePath());
+                             Song *song = new Song(url.url().toStdString());
+                             MusicPlayer::instance().open(song);
+                             this->player_->loadSongData();
+                         });
 
         QPushButton *closeBtn = new QPushButton("X");
         closeBtn->setObjectName("titlebar");
