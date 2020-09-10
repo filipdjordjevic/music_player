@@ -18,6 +18,7 @@ SOURCES += \
     src/widgets/SeekBar.cpp \
     src/widgets/LcdLabel.cpp \
     src/widgets/PlayerFrame.cpp \
+    src/widgets/PlaylistView.cpp \
 
 HEADERS += \
     src/player/Song.hpp \
@@ -29,6 +30,7 @@ HEADERS += \
     src/widgets/SeekBar.hpp \
     src/widgets/LcdLabel.hpp \
     src/widgets/PlayerFrame.hpp \
+    src/widgets/PlaylistView.hpp \
 
 RESOURCES += \
     resources/res.qrc \

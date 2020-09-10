@@ -12,11 +12,13 @@ namespace ui
         this->initTitlebar();
 
         player_ = new PlayerFrame;
+        playlistView_ = new PlaylistView;
 
         QVBoxLayout *mainLayout = new QVBoxLayout;
         mainLayout->setContentsMargins(0, 0, 0, 0);
         mainLayout->addLayout(titleBtns_);
         mainLayout->addWidget(player_);
+        mainLayout->addWidget(playlistView_);
 
         setLayout(mainLayout);
         this->layout()->setSizeConstraint(QLayout::SetFixedSize);
