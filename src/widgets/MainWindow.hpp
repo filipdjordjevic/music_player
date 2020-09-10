@@ -25,5 +25,9 @@ namespace ui
         void mouseMoveEvent(QMouseEvent *event) override;
         void mousePressEvent(QMouseEvent *event) override;
         void paintEvent(QPaintEvent *event) override;
+
+    public slots:
+        void showContextMenu(const QPoint &);
+        void removeItem();
     };
 } // namespace ui

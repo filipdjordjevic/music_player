@@ -22,6 +22,7 @@ SOURCES += \
     src/data/sqlite/sqlite3.c \
     src/data/SongTable.cpp \
     src/player/Playlist.cpp \
+    src/widgets/SongListItem.cpp \
 
 HEADERS += \
     src/player/Song.hpp \
@@ -37,6 +38,7 @@ HEADERS += \
     src/data/sqlite/sqlite3.h \
     src/data/SongTable.hpp \
     src/player/Playlist.hpp \
+    src/widgets/SongListItem.hpp \
 
 RESOURCES += \
     resources/res.qrc \

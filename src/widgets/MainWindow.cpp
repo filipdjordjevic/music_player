@@ -22,6 +22,10 @@ namespace ui
 
         setLayout(mainLayout);
         this->layout()->setSizeConstraint(QLayout::SetFixedSize);
+
+        QObject::connect(playlistView_, &PlaylistView::songDoubleClicked, [this] { player_->loadSongData(); });
+        playlistView_->setContextMenuPolicy(Qt::CustomContextMenu);
+        QObject::connect(playlistView_, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(showContextMenu(QPoint)));
     }
 
     void MainWindow::paintEvent(QPaintEvent *)
@@ -63,6 +67,7 @@ namespace ui
                              Song *song = new Song(url.url().toStdString());
                              MusicPlayer::instance().open(song);
                              this->player_->loadSongData();
+                             playlistView_->add(song);
                          });
 
         QPushButton *closeBtn = new QPushButton("X");
@@ -77,5 +82,21 @@ namespace ui
         titleBtns_->addStretch();
         titleBtns_->addWidget(minimizeBtn);
         titleBtns_->addWidget(closeBtn);
+    }
+
+    void MainWindow::showContextMenu(const QPoint &pos)
+    {
+        QPoint globalPos = playlistView_->mapToGlobal(pos);
+
+        QMenu menu;
+        menu.addAction("Remove", this, SLOT(removeItem()));
+
+        menu.exec(globalPos);
+    }
+
+    void MainWindow::removeItem()
+    {
+        SongListItem *item = static_cast<SongListItem *>(playlistView_->currentItem());
+        playlistView_->deleteItem(item);
     }
 } // namespace ui
