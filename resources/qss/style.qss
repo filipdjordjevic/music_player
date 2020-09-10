@@ -50,6 +50,11 @@ ui--CircleButton#mute {
 	qproperty-icon: url(":/icon/speaker_mute.svg");
 }
 
+ui--VolumeSlider {
+	min-width: 150px;
+	max-width: 150px;
+}
+
 ui--VolumeSlider::groove::horizontal {
 	background-color: black;
 	border: 0px solid #424242; 
