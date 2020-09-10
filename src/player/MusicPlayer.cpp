@@ -19,6 +19,7 @@ namespace player
 
     void MusicPlayer::open(Song *song)
     {
+        mciSendStringShort("close curr_song");
         this->song_ = song;
         std::stringstream command;
         command << "open \"" << song_->path() << "\" type mpegvideo alias curr_song";
@@ -53,6 +54,13 @@ namespace player
     {
         char res[128];
         mciSendStringA("status curr_song position", res, 128, NULL);
+        return atoi(res);
+    }
+
+    long MusicPlayer::songLength() const
+    {
+        char res[128];
+        mciSendStringA("status curr_song length", res, 128, NULL);
         return atoi(res);
     }
 

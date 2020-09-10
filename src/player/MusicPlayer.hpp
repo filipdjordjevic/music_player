@@ -23,6 +23,7 @@ namespace player
         void seek(const long &ms) const;
         void setVolume(const long &value) const;
         long position() const;
+        long songLength() const;
         Song *currentSong() const;
     };
 
