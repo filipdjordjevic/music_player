@@ -3,6 +3,7 @@
 #include <QWidget>
 
 #include "PlayerFrame.hpp"
+#include "PlaylistView.hpp"
 
 namespace ui
 {
@@ -12,6 +13,7 @@ namespace ui
 
     private:
         PlayerFrame *player_;
+        PlaylistView *playlistView_;
         QHBoxLayout *titleBtns_;
         QPoint dragPosition_;
 

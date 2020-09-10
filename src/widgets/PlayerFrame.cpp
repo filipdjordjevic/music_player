@@ -30,6 +30,7 @@ namespace ui
         bLayout->addWidget(playBtn_);
         bLayout->addWidget(soundBtn_);
         bLayout->addWidget(volumeSlider_);
+        bLayout->addStretch();
 
         tLayout->addWidget(durationLbl_);
         tLayout->addWidget(songLbl_);
